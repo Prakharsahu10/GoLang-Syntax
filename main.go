@@ -6,7 +6,6 @@ import (
 	"time"
 )
 
-
 const conferenceTickets int = 50
 var conferenceName = "Go Conference"
 var remainingTickets uint = 50
@@ -20,15 +19,11 @@ type UserData struct {
 }
 
 func main() {
-	
-
 	greetUsers()
 
 	for {
-
 	firstName, lastName, email, userTickets := getUserInput()
 	isValidName, isValidEmail, isValidTicketNumber :=  helper.ValidateUserInput(firstName, lastName, email, userTickets, remainingTickets)
-
 
 	if isValidEmail && isValidName && isValidTicketNumber {
 
